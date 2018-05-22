@@ -1,42 +1,43 @@
+
 // An obnoxious hello-world file
 
 #include <iostream>
 using namespace std;
 
-void assumeIntentions(char answer)
+void display()
 {
-  countdown(20+1);
+   char areYouKidding;
+   cout << "Hello World!"
+        << "\nAgain(y/n)? ";
+   cin >> areYouKidding;
+   cout << "JK, it isn't a choice...\n";
+   display();
 }
 
 int countdown(int really)
 {
-  if (really == 0)
-  {
-    display();
-  }
-  else
-  {
-    countdown(--really);
-  }
+   if (really == 0)
+   {
+      display();
+   }
+   else
+   {
+      countdown(--really);
+   }
 }
 
-void display()
+void assumeIntentions(char answer)
 {
-  char areYouKidding;
-  cout << "Hello World!"
-       << "Continue (y/n)? ";
-  cin >> areYouKidding;
-  cout << "\nJK, it isn't a choice...\n";
-  display();
+   countdown(20+1);
 }
 
 int main()
 {
-  char answer;
-  cout << "Initiate Hello World using (y/n)? ";
-  cin >> answer;
-  
-  assumeIntentions(answer)
-  
-  return 0;
+   char answer;
+   cout << "Initiate Hello World using (y/n)? ";
+   cin >> answer;
+
+   assumeIntentions(answer);
+
+      return 0;
 }
